@@ -2,59 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azizoğlu Ambalaj Stok Yönetimi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="main-title">Azizoğlu Ambalaj - Stok ve Fiyat Paneli</h1>
+    <header class="header">
+        <div class="container">
+            <h1 id="main-title" class="logo">Azizoğlu Ambalaj</h1>
+            <p class="subtitle">Stok ve Fiyat Paneli</p>
+            <a href="https://www.azizogluambalaj.com" class="portal-link">Fabrika Portal</a>
+        </div>
+    </header>
 
-    <div>
-        <p><b>Fabrika üretim durumu: 
-            <a href="https://www.azizogluambalaj.com">Azizoğlu Portal</a></b>
-        </p>
-        
-        <button onclick="categoryList('tasima')">Taşıma Kolileri</button>
-        <button onclick="categoryList('sivi')">Sıvı Taşıma Kolileri</button>
-        <button onclick="categoryList('hepsi')">Tüm Stok</button>
-    </div>
+    <nav class="navbar">
+        <div class="container">
+            <button class="nav-btn" onclick="categoryList('tasima')">Taşıma Kolileri</button>
+            <button class="nav-btn" onclick="categoryList('sivi')">Sıvı Taşıma Kolileri</button>
+            <button class="nav-btn" onclick="categoryList('hepsi')">Tüm Stok</button>
+        </div>
+    </nav>
 
-    <hr>
-
-    <div id="display-area">
-        <h3>Lütfen bir kategori seçin.</h3>
-    </div>
-
-    <hr>
-
-    <div class="transactions">
-        <button onclick="addProduct()">Yeni Ürün Ekle (Push)</button>
-        <button onclick="deleteLastProduct()">Son Ürünü Çıkar (Pop)</button>
-        <button onclick="discountApply()">Tümüne İndirim Yap (Map)</button>
-    </div>
-
-    <hr>
-
-    <section>
-        <h2>Ürün Bilgisi Güncelleme</h2>
-        <form onsubmit="updateData(event)">
-            <div>
-                Ürün Tam Adı: <br>
-                <input type="text" id="current-name" required placeholder="Örn: 40*60*40 Taşıma Kolisi">
+    <main class="container">
+        <section class="display-section">
+            <div id="display-area" class="products-grid">
+                <h3>Lütfen bir kategori seçin.</h3>
             </div>
-            <br>
-            <div>
-                Yeni Stok Miktarı: <br>
-                <input type="number" id="updated-stock" required>
+        </section>
+
+        <section class="actions-section">
+            <h2>İşlemler</h2>
+            <div class="transactions">
+                <button class="action-btn primary" onclick="addProduct()">Yeni Ürün Ekle (Push)</button>
+                <button class="action-btn danger" onclick="deleteLastProduct()">Son Ürünü Çıkar (Pop)</button>
+                <button class="action-btn warning" onclick="discountApply()">Tümüne İndirim Yap (Map)</button>
             </div>
-            <br>
-            <div>
-                Yeni Fiyat (TL): <br>
-                <input type="number" id="updated-price" required>
-            </div>
-            <br>
-            <button type="submit">Bilgileri Kaydet ve Uygula</button>
-        </form>
-    </section>
-    <p id="parcel"></p>
+        </section>
+
+        <section class="update-section">
+            <h2>Ürün Bilgisi Güncelleme</h2>
+            <form class="update-form" onsubmit="updateData(event)">
+                <div class="form-group">
+                    <label for="current-name">Ürün Tam Adı</label>
+                    <input type="text" id="current-name" required placeholder="Örn: 40*60*40 Taşıma Kolisi">
+                </div>
+                <div class="form-group">
+                    <label for="updated-stock">Yeni Stok Miktarı</label>
+                    <input type="number" id="updated-stock" required>
+                </div>
+                <div class="form-group">
+                    <label for="updated-price">Yeni Fiyat (TL)</label>
+                    <input type="number" id="updated-price" required>
+                </div>
+                <button type="submit" class="submit-btn">Bilgileri Kaydet ve Uygula</button>
+            </form>
+        </section>
+
+        <section class="result-section">
+            <p id="parcel"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Azizoğlu Ambalaj. Tüm hakları saklıdır.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
