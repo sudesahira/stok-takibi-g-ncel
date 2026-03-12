@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Azizoğlu Ambalaj Stok Yönetimi</title>
+</head>
+<body>
+    <h1 id="main-title">Azizoğlu Ambalaj - Stok ve Fiyat Paneli</h1>
+
+    <div>
+        <p><b>Fabrika üretim durumu: 
+            <a href="https://www.azizogluambalaj.com">Azizoğlu Portal</a></b>
+        </p>
+        
+        <button onclick="categoryList('tasima')">Taşıma Kolileri</button>
+        <button onclick="categoryList('sivi')">Sıvı Taşıma Kolileri</button>
+        <button onclick="categoryList('hepsi')">Tüm Stok</button>
+    </div>
+
+    <hr>
+
+    <div id="display-area">
+        <h3>Lütfen bir kategori seçin.</h3>
+    </div>
+
+    <hr>
+
+    <div class="transactions">
+        <button onclick="addProduct()">Yeni Ürün Ekle (Push)</button>
+        <button onclick="deleteLastProduct()">Son Ürünü Çıkar (Pop)</button>
+        <button onclick="discountApply()">Tümüne İndirim Yap (Map)</button>
+    </div>
+
+    <hr>
+
+    <section>
+        <h2>Ürün Bilgisi Güncelleme</h2>
+        <form onsubmit="updateData(event)">
+            <div>
+                Ürün Tam Adı: <br>
+                <input type="text" id="current-name" required placeholder="Örn: 40*60*40 Taşıma Kolisi">
+            </div>
+            <br>
+            <div>
+                Yeni Stok Miktarı: <br>
+                <input type="number" id="updated-stock" required>
+            </div>
+            <br>
+            <div>
+                Yeni Fiyat (TL): <br>
+                <input type="number" id="updated-price" required>
+            </div>
+            <br>
+            <button type="submit">Bilgileri Kaydet ve Uygula</button>
+        </form>
+    </section>
+    <p id="parcel"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
