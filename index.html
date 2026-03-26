@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azizoğlu Ambalaj Stok Yönetimi</title>
+    <!--b kullandım-->
+    <title><b>Azizoğlu Ambalaj Stok Yönetimi</b></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header class="header">
         <div class="container">
+            <!--h1 kullandım-->
             <h1 id="main-title" class="logo">Azizoğlu Ambalaj</h1>
+            <!--p kullandım-->
             <p class="subtitle">Stok ve Fiyat Paneli</p>
+            <!--a kullandım-->
             <a href="https://www.azizogluambalaj.com" class="portal-link">Fabrika Portal</a>
         </div>
     </header>
@@ -31,12 +36,62 @@
         </section>
 
         <section class="actions-section">
-            <h2>Hareketler</h2>
+            <h2>GÜVENLİ TAŞIMA,KALİTELİ AMBALAJ </h2>
             <div class="transactions">
                 <button class="action-btn primary" onclick="addProduct()">Yeni Ürün Ekle (Push)</button>
                 <button class="action-btn danger" onclick="deleteLastProduct()">Son Ürünü Çıkar (Pop)</button>
                 <button class="action-btn warning" onclick="discountApply()">Tümüne İndirim Yap (Map)</button>
             </div>
+        </section>
+        <!--ol kullandım-->
+        <section class="info-section">
+            <h2>SİPARİŞ VERME SÜRECİ</h2>
+            <ol>
+                <li>KALİTE SEÇİMİ</li>
+                <li>BASKI SEÇİMİ</li>
+                <li>ÜRÜN EBATI</li>
+                <li>ÜRÜN GÖNDERİM YERİ</li>
+            </ol>
+        </section>
+        <!--table kullandım-->
+        <section class="table-section">
+            <h2>Ürün Kategorileri</h2>
+            <table class="products-table">
+                <thead>
+                    <tr>
+                        <th>Kategori</th>
+                        <th>Ürün Adı</th>
+                        <th>Stok Miktarı</th>
+                        <th>Fiyat (TL)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Taşıma Kolileri</td>
+                        <td>40x60x40 Taşıma Kolisi</td>
+                        <td>500</td>
+                        <td>2.50</td>
+                    </tr>
+                    <tr>
+                        <td>Taşıma Kolileri</td>
+                        <td>30x40x30 Taşıma Kolisi</td>
+                        <td>750</td>
+                        <td>1.80</td>
+                    </tr>
+                    <tr>
+                        <td>Sıvı Taşıma Kolileri</td>
+                        <td>5L Sıvı Taşıma Kolisi</td>
+                        <td>300</td>
+                        <td>3.25</td>
+                    </tr>
+                    <tr>
+                        <td>Sıvı Taşıma Kolileri</td>
+                        <td>10L Sıvı Taşıma Kolisi</td>
+                        <td>200</td>
+                        <td>4.50</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section class="update-section">
